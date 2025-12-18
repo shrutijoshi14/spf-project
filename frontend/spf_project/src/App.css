@@ -1,42 +1,270 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+
+
+/* body {
+  /* background: url("C:\Users\admin\sp-finance\src\assets\new wallpaper.jpg") no-repeat center center fixed;
+  background-size: cover;
+   */
+/* } */
+
+.navbar {
+background-color: white;
+  height: 80px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3); 
+
+}
+
+/* Page Title */
+/* .mb-4 {
+  font-family: sans-serif;
+  font-size: 40px;
+  color: white; 
+}  */
+
+/* Login Card */
+.login-card {
+  background-color: rgba(255, 255, 255, 0.15); /* transparent white */
+  backdrop-filter: blur(8px); /* glassmorphism effect */
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 20px 20px 32px rgba(0, 0, 0, 0.2);
+  color: black;
+  margin-top: 100px;
+}
+.logo-circle {
+  margin-left: 100px;
+  margin-bottom: -10px;
+  width: 100px;          /* adjust size */
+  height: 100px;
+  border-radius: 50%;    /* crop into circle */
+  /* object-fit: cover; */
+}
+
+.logo-circle-header{
+   /* margin-left: 80px;
+  margin-bottom: 10px; */
+  width: 60px;          /* adjust size */
+  height:60px;
+  border-radius: 50%;
+  margin-left: 20px;
+}
+
+
+
+/* Form labels */
+.form-label {
+  font-weight: bold;
+  color: rgb(8, 8, 8); /* so labels are visible */
+  
+}
+
+/* Login text */
+.login-text {
+  font-size: xx-large;
+  color: rgb(8, 8, 8);
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+/* Container */
+.container {
+  margin-top: 20px;
+}
+
+/* Buttons */
+.btn-text {
+  font-weight: bold;
+}
+
+.google-btn {
+  margin-bottom: 10px;
+  background: rgb(8, 8, 8);
+  border: none;
+  /* backdrop-filter: blur(5px); */
+  color: rgb(245, 239, 239);
+
+}
+
+.brand-title {
+  font-family:Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: rgba(8, 8, 8, 0.8);
+  margin-left: 20px;
+}
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #222;
+  color: white;
   text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.outlet{
+  /* margin-left: 180px; */
+  /* margin-top:100px ; */
+  position: relative;
+  top: 100px;
+  left: 180px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.value{
+  margin-bottom: 9px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
 .card {
-  padding: 2em;
+  border-radius: 12px;
+  transition: transform 0.2s ease-in-out;
+}
+.card:hover {
+  transform: scale(1.05);
+}
+/* .row{
+  width: 1200px;
+  height: 1000px;
+} */
+
+/* .dashboard-container {
+  padding-top: 20px;
+  padding-bottom: 20px;
+} */
+  
+
+.loans{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 45px;
+
+}        
+.form-control{
+  
+  color: black;
+
+}
+.container {
+  display: flex;
 }
 
-.read-the-docs {
-  color: #888;
+
+
+/* Dashboard layout spacing */
+.custom-gap {
+  --bs-gutter-x: 1.5rem; /* same horizontal spacing as gx-4 */
+  --bs-gutter-y: 0.8rem; /* smaller vertical spacing between rows */
+}
+
+.row { 
+  --bs-gutter-x: 1.5rem !important;
+  --bs-gutter-y: 1.5rem !important;
+}  
+.dashboard-cards{
+  display: flex;
+  gap: 20px;
+}
+
+.card{
+  
+  min-width: 300px;           /* Increase height of each card */
+  font-size: 50px;           /* Make text slightly bigger */
+  border-radius: 15px;         /* Smooth corners */
+  box-shadow: 15px 10px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  margin-left: 20px;
+}
+
+/* Hover effect for a nice dashboard feel */
+.dashboard-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Optional: increase icon size slightly for balance */
+.dashboard-card svg {
+  width: 36px;
+  height: 36px;
+}
+.charts{
+  height: 500px;
+}
+.buttons{
+  display: flex;
+  
+}
+.searchbar{
+  min-width: 400px;
+  height: 40px;
+  
+  
+}
+.total-loans{
+  width: auto;
+  height: 50px;
+  font-size: 30px;
+  font-weight: bold;
+
+}
+.active-loans{
+  width: auto;
+  height: 50px;
+  font-size: 30px;
+  font-weight: bold;
+
+}
+.inactive-loans{
+  width: auto;
+  height: 50px;
+  font-size: 30px;
+  font-weight: bold;
+
+ } 
+ .active-loanbtn{
+  width: 100px;
+  height: 40px;
+  margin-top: 15px;
+
+}
+.inactive-loanbtn{
+  width: 100px;
+  height: 40px;
+  margin-top: 15px;
+
+}
+.overdue-btn{
+  width: 100px;
+  height: 40px;
+  margin-top: 15px;
+
+}
+.upload{
+  width: 100px;
+  height: 40px;
+  margin-top: 15px;
+
+}
+.download-btn{
+  width: 120px;
+  height: 40px;
+  margin-top: 15px;
+
+}
+.add-button{
+  display: flex;
+}
+.new-loan{
+  width: 225px;
+  height: 40px;
+  margin-top: 15px;
+}
+.buttons{
+  gap: 10px;
+  margin-left: 10px;
+}
+.topUp-btn{
+  width: 120px;
+  height: 40px;
+  margin-top: 15px;
+
 }
