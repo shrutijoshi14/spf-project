@@ -148,9 +148,9 @@ const showInactive = () => {
         <InactiveButton  onInactive={showInactive}/>
         <OverDue />
         {/* <TopupButton/> */}
-        <UploadButton />
-        <DownloadButton onDownload={() => downloadCSV()}/>
-
+        <UploadButton onImportSuccess={refreshBorrowers} />
+        {/* <DownloadButton onDownload={() => downloadCSV()}/> */}
+        <DownloadButton />
       </div>
 
       <div>

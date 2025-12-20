@@ -42,3 +42,13 @@ db.query(
 callback
 );
 };
+
+
+// models/borrowerModel.js ACJ
+export const bulkInsertBorrowers = (borrowersData, callback) => {
+    const q = `INSERT INTO borrowers 
+        (name, borrowerAddress, mobileNumber, loanAmount, disbursementDate, interestRate, interestAmount, outstanding, loanReferredBy, penalty, status) 
+        VALUES ?`;
+    
+    db.query(q, [borrowersData], callback);
+};
